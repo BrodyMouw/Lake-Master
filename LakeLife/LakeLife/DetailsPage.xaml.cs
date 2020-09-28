@@ -12,14 +12,14 @@ namespace LakeLife
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailsPage : ContentPage
     {
-        public DetailsPage(Property property)
+        public DetailsPage(Gig property)
         {
             InitializeComponent();
             this.Property = property;
             this.BindingContext = this;
         }
 
-        public Property Property { get; set; }
+        public Gig Property { get; set; }
 
         private void GoBack(object sender, EventArgs e)
         {

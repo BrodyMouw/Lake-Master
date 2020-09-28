@@ -86,7 +86,7 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="PropertySelected"/>
+                                    <TapGestureRecognizer Tapped="GigSelected"/>
                                 </Grid.GestureRecognizers>
                                 <Image HeightRequest="115" Aspect="AspectFill" Source="{Binding Image}" st:Transition.Name="PropertyImage" />
                                 <Image Source="bookmark.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>
