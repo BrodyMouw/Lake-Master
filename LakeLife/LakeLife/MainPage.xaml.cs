@@ -10,6 +10,8 @@ namespace LakeLife
 {
     public partial class MainPage : ContentPage
     {
+
+        // test comments
         public MainPage()
         {
             InitializeComponent();
