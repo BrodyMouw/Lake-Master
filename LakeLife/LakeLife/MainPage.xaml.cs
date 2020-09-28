@@ -16,34 +16,34 @@ namespace LakeLife
             this.BindingContext = this;
         }
 
-        public List<PropertyType> PropertyTypeList => GetPropertyTypes();
-        public List<Property> PropertyList => GetProperties();
+        public List<GigType> PropertyTypeList => GetGigTypes();
+        public List<Gig> PropertyList => GetGigs();
 
-        private List<PropertyType> GetPropertyTypes()
+        private List<GigType> GetGigTypes()
         {
-            return new List<PropertyType>
+            return new List<GigType>
             {
-                new PropertyType { TypeName = "All" },
-                new PropertyType { TypeName = "Studio" },
-                new PropertyType { TypeName = "4 Bed" },
-                new PropertyType { TypeName = "3 Bed" },
-                new PropertyType { TypeName = "Office" }
+                new GigType { TypeName = "All" },
+                new GigType { TypeName = "Studio" },
+                new GigType { TypeName = "4 Bed" },
+                new GigType { TypeName = "3 Bed" },
+                new GigType { TypeName = "Office" }
             };
         }
 
-        private List<Property> GetProperties()
+        private List<Gig> GetGigs()
         {
-            return new List<Property>
+            return new List<Gig>
             {
-                new Property { Image = "apt1.png", Address = "2162 Patricia Ave, LA", Location = "Califonia", Price = "$1500/mo", Bed = "4 Bed", Bath = "3 Bath", Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt2.png", Address = "2168 Cushions Dr, LA", Location = "Califonia", Price = "$1000/mo", Bed = "3 Bed", Bath = "1 Bath", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Address = "2112 Anthony Way, LA", Location = "Califonia", Price = "$900/mo", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Gig { Image = "apt1.png", Address = "2162 Patricia Ave, LA", Location = "Califonia", Price = "$1500/mo", Bed = "4 Bed", Bath = "3 Bath", Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Gig { Image = "apt2.png", Address = "2168 Cushions Dr, LA", Location = "Califonia", Price = "$1000/mo", Bed = "3 Bed", Bath = "1 Bath", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Gig { Image = "apt3.png", Address = "2112 Anthony Way, LA", Location = "Califonia", Price = "$900/mo", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
             };
         }
 
-        private async void PropertySelected(object sender, EventArgs e)
+        private async void GigSelected(object sender, EventArgs e)
         {
-            var property = (sender as View).BindingContext as Property;
+            var property = (sender as View).BindingContext as Gig;
             await this.Navigation.PushAsync(new DetailsPage(property));
         }
 
@@ -71,12 +71,12 @@ namespace LakeLife
         }
     }
 
-    public class PropertyType
+    public class GigType
     {
         public string TypeName { get; set; }
     }
 
-    public class Property
+    public class Gig
     {
         public string Id => Guid.NewGuid().ToString("N");
         public string PropertyName { get; set; }
