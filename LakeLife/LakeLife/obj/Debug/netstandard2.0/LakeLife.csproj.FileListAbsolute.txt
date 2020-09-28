@@ -13,3 +13,4 @@ C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife\bin\Debug\netstandar
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife\bin\Debug\netstandard2.0\LakeLife.pdb
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife\obj\Debug\netstandard2.0\DetailsPage.xaml.g.cs
+C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife\obj\Debug\netstandard2.0\SplashPage.xaml.g.cs

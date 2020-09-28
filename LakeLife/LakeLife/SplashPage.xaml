@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:st="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
+             x:Class="LakeLife.SplashPage"
+             Title="{Binding Title}"
+	         IsBusy="{Binding IsBusy}">
+    <ContentPage.Content Padding="0">
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Lake Life" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
+            <Image
+                x:Name="HomeBoat"
+                Grid.ColumnSpan="2"
+				Source="homeBoat.jpg"
+                Aspect="AspectFill"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions ="FillAndExpand"/>
+            <Button 
+				Clicked="GetStarted"
+				Grid.Row="1"
+                Grid.ColumnSpan="2"
+				BackgroundColor="#3498DB"
+				BorderRadius="0"
+				TextColor="White" 
+				Text="Get Started"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

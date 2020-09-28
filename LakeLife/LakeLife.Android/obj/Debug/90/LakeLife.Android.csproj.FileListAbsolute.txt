@@ -507,3 +507,4 @@ C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife.Android\obj\Debug\90
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Brody Mouw\source\repos\LakeLife\LakeLife\LakeLife.Android\obj\Debug\90\res\drawable\homeboat.jpg
