@@ -93,7 +93,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\homeBoat.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LakeLife\LakeLife.csproj">
       <Project>{0E6E334D-7E06-48E0-ABDB-5082284E6BB5}</Project>

@@ -14,8 +14,12 @@ namespace LakeLife
         public App()
         {
             InitializeComponent();
-
-            MainPage = new SharedTransitionNavigationPage(new MainPage());
+            MainPage = new SharedTransitionNavigationPage(new SplashPage())
+            {
+                BarTextColor = Color.White,
+                BarBackgroundColor = Color.FromHex("#2B84D3")
+            };
+            //MainPage = new SharedTransitionNavigationPage(new MainPage());
         }
 
         protected override void OnStart()
