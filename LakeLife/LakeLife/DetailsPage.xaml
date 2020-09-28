@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <!--first row (image)-->
-        <Image Aspect="AspectFill" Source="{Binding Property.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" st:Transition.Name="PropertyImage" />
+        <Image Aspect="AspectFill" Source="{Binding Gig.Image}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" st:Transition.Name="PropertyImage" />
         <ImageButton BackgroundColor="Transparent" Aspect="Fill" Source="back.png" Margin="25" WidthRequest="20" HeightRequest="13" 
                      HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
         
@@ -29,16 +29,16 @@
                     <Grid HorizontalOptions="FillAndExpand">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
                             <Image HeightRequest="12" WidthRequest="8" Source="address.png" VerticalOptions="Center" HorizontalOptions="Start"/>
-                            <Label Text="{Binding Property.Address}" FontSize="15" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Text="{Binding Gig.Address}" FontSize="15" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
                         </StackLayout>
                         <ImageButton BackgroundColor="Transparent" Aspect="Fill" HeightRequest="30" WidthRequest="30" Source="direction.png" VerticalOptions="Center" HorizontalOptions="End"/>
                     </Grid>
                     <StackLayout Grid.Row="1" Spacing="15" >
-                        <Label Text="{Binding Property.Price}" FontSize="20" FontFamily="ThemeFontBold" TextColor="#515151"/>
+                        <Label Text="{Binding Gig.Price}" FontSize="20" FontFamily="ThemeFontBold" TextColor="#515151"/>
                         <StackLayout Orientation="Horizontal" Spacing="15">
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image WidthRequest="16" Source="bed.png"/>
-                                <Label Text="{Binding Property.Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
+                                <Label Text="{Binding Gig.Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image WidthRequest="16" Source="shower.png"/>
@@ -46,7 +46,7 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image WidthRequest="16" Source="square.png"/>
-                                <Label Text="{Binding Property.Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
+                                <Label Text="{Binding Gig.Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>
@@ -79,7 +79,7 @@
                     </StackLayout>
                     <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
                     <Label Text="Details" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
-                    <Label Text="{Binding Property.Details}"  FontSize="15" FontFamily="ThemeFontRegular" TextColor="#515151"/>
+                    <Label Text="{Binding Gig.Details}"  FontSize="15" FontFamily="ThemeFontRegular" TextColor="#515151"/>
                 </StackLayout>
             </ScrollView>
         </pv:PancakeView>
