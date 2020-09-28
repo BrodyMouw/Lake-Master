@@ -18,8 +18,8 @@ namespace LakeLife
             this.BindingContext = this;
         }
 
-        public List<GigType> PropertyTypeList => GetGigTypes();
-        public List<Gig> PropertyList => GetGigs();
+        public List<GigType> GigTypeList => GetGigTypes();
+        public List<Gig> GigList => GetGigs();
 
         private List<GigType> GetGigTypes()
         {
