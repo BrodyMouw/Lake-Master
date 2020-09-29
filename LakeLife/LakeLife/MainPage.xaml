@@ -31,9 +31,9 @@
         </Frame>
         
         <!--Label and filters-->
+        <Label Grid.Row="1" Text="Our Services" FontSize="20" TextColor="#323234" FontFamily="ThemeFontRegular" HorizontalOptions="Start"/>
 
-
-        <StackLayout Grid.Row="1">
+        <!--<StackLayout Grid.Row="1">
             <Label Text="Property Type" TextColor="#515151" FontSize="15" FontFamily="ThemeFontBold"/>
             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                 <StackLayout Orientation="Horizontal" Spacing="10" BindableLayout.ItemsSource="{Binding GigTypeList}">
@@ -43,7 +43,7 @@
                                 <pv:PancakeView.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="SelectType"/>
                                 </pv:PancakeView.GestureRecognizers>
-                                <!--<VisualStateManager.VisualStateGroups>
+                                --><!--<VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal">
                                             <VisualState.Setters>
@@ -65,14 +65,14 @@
                                             </VisualState.Setters>
                                         </VisualState>
                                     </VisualStateGroup>
-                                </VisualStateManager.VisualStateGroups>-->
+                                </VisualStateManager.VisualStateGroups>--><!--
                                 <Label x:Name="PropertyTypeName" Padding="20,5" Text="{Binding TypeName}" TextColor="#707070" FontSize="15" FontFamily="ThemeFontRegular"/>
                             </pv:PancakeView>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
             </ScrollView>
-        </StackLayout>
+        </StackLayout>-->
 
         <!--Items lists (properties)-->
         <ScrollView Grid.Row="2" Margin="0,10" VerticalScrollBarVisibility="Never">
@@ -88,20 +88,21 @@
                                 <Grid.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="GigSelected"/>
                                 </Grid.GestureRecognizers>
-                                <Image HeightRequest="115" Aspect="AspectFill" Source="{Binding Image}" st:Transition.Name="PropertyImage" />
-                                <Image Source="bookmark.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>
+                                <Image HeightRequest="115" Aspect="AspectFill" Source="{Binding Image}" st:Transition.Name="PropertyImage" VerticalOptions="FillAndExpand" />
+                                <!--<Image Source="bookmark.png" HorizontalOptions="End" Margin="12" HeightRequest="16" VerticalOptions="Start"/>-->
                                 <Grid VerticalOptions="End" Margin="15">
                                     <pv:PancakeView CornerRadius="13" Padding="15,5" BackgroundColor="Black" Opacity="0.5" 
                                                     HorizontalOptions="Start" VerticalOptions="Start">
-                                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
+                                        <!--<StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Start">
                                             <Image HeightRequest="12" WidthRequest="12" Source="location.png" VerticalOptions="Center" HorizontalOptions="Start"/>
                                             <Label Text="{Binding Location}" FontSize="12" TextColor="White" FontFamily="ThemeFontRegular" VerticalOptions="Center"/>
-                                        </StackLayout>
+                                        </StackLayout>-->
                                     </pv:PancakeView>
                                 </Grid>
                                 <StackLayout Grid.Row="1" Spacing="5" Margin="20,5">
-                                    <Label Text="{Binding Price}" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
-                                    <StackLayout Orientation="Horizontal" Spacing="15">
+                                    <Label Text="{Binding GigName}" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
+                                    <Label Text="{Binding Price}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#515151"/>
+                                    <!--<StackLayout Orientation="Horizontal" Spacing="15">
                                         <StackLayout Orientation="Horizontal" Spacing="10">
                                             <Image WidthRequest="16" Source="bed.png"/>
                                             <Label Text="{Binding Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
@@ -114,7 +115,7 @@
                                             <Image WidthRequest="16" Source="square.png"/>
                                             <Label Text="{Binding Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                                         </StackLayout>
-                                    </StackLayout>
+                                    </StackLayout>-->
                                 </StackLayout>
                             </Grid>
                         </pv:PancakeView>

@@ -26,14 +26,15 @@
                         BackgroundColor="White" VerticalOptions="FillAndExpand">
             <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
                 <StackLayout Spacing="15" HorizontalOptions="FillAndExpand">
+                    <Label Text="{Binding Gig.GigName}" FontSize="18" TextColor="#323234" FontFamily="ThemeFontBold" HorizontalOptions="Start" VerticalOptions="Center"/>
                     <Grid HorizontalOptions="FillAndExpand">
-                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
+                        <!--<StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand">
                             <Image HeightRequest="12" WidthRequest="8" Source="address.png" VerticalOptions="Center" HorizontalOptions="Start"/>
                             <Label Text="{Binding Gig.Address}" FontSize="15" TextColor="Black" FontFamily="ThemeFontRegular" HorizontalOptions="Start" VerticalOptions="Center"/>
-                        </StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Aspect="Fill" HeightRequest="30" WidthRequest="30" Source="direction.png" VerticalOptions="Center" HorizontalOptions="End"/>
+                        </StackLayout>-->
+                        <!--<ImageButton BackgroundColor="Transparent" Aspect="Fill" HeightRequest="30" WidthRequest="30" Source="direction.png" VerticalOptions="Center" HorizontalOptions="End"/>-->
                     </Grid>
-                    <StackLayout Grid.Row="1" Spacing="15" >
+                    <!--<StackLayout Grid.Row="1" Spacing="15" >
                         <Label Text="{Binding Gig.Price}" FontSize="20" FontFamily="ThemeFontBold" TextColor="#515151"/>
                         <StackLayout Orientation="Horizontal" Spacing="15">
                             <StackLayout Orientation="Horizontal" Spacing="10">
@@ -49,9 +50,10 @@
                                 <Label Text="{Binding Gig.Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="#707070"/>
                             </StackLayout>
                         </StackLayout>
-                    </StackLayout>
+                    </StackLayout>-->
                     <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
-                    <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
+                        <Label Text="{Binding Gig.Price}" FontSize="14" TextColor="#323234" FontFamily="ThemeFontRegular" HorizontalOptions="Start"/>
+                    <!--<StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
                         <StackLayout>
                             <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
                                 <Image WidthRequest="16" HeightRequest="16" Source="phone.png" HorizontalOptions="Center" VerticalOptions="Center"/>
@@ -76,10 +78,10 @@
                             </pv:PancakeView>
                             <Label Text="More" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
                         </StackLayout>
-                    </StackLayout>
+                    </StackLayout>-->
                     <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
                     <Label Text="Details" FontSize="15" FontFamily="ThemeFontBold" TextColor="#515151"/>
-                    <Label Text="{Binding Gig.Details}"  FontSize="15" FontFamily="ThemeFontRegular" TextColor="#515151"/>
+                    <Label Text="{Binding Gig.Description}"  FontSize="15" FontFamily="ThemeFontRegular" TextColor="#515151"/>
                 </StackLayout>
             </ScrollView>
         </pv:PancakeView>
