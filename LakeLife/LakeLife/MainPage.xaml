@@ -8,7 +8,7 @@
              st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
 
-    <Grid BackgroundColor="#F9F9F9" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
+    <Grid BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
