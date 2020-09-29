@@ -86,9 +86,9 @@
         <pv:PancakeView Grid.Row="2" HeightRequest="50" BackgroundGradientAngle="270">
             <pv:PancakeView.BackgroundGradientStops>
                 <pv:GradientStopCollection>
-                    <pv:GradientStop Color="#FF4157" Offset="0" />
-                    <pv:GradientStop Color="#FF4359" Offset="0.5" />
-                    <pv:GradientStop Color="#FE93C5" Offset="1" />
+                    <pv:GradientStop Color="#3498DB" Offset="0" />
+                    <pv:GradientStop Color="CornflowerBlue" Offset="0.5" />
+                    <pv:GradientStop Color="AliceBlue" Offset="1" />
                 </pv:GradientStopCollection>
             </pv:PancakeView.BackgroundGradientStops>
             <Label Text="Book Now" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>

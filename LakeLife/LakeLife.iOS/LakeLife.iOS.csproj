@@ -208,4 +208,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\homeBoat.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\boatFeet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\halfDetail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fullDetail.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tarpnclean.jpg" />
+  </ItemGroup>
 </Project>
