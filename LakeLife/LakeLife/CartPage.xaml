@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LakeLife.CartPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:st="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+    
+    
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ImageButton BackgroundColor="Black" Aspect="Fill" Source="back.png" Margin="25" WidthRequest="20" HeightRequest="13" 
+                     HorizontalOptions="Start" VerticalOptions="Start" Clicked="GoBack"/>
+
+    </Grid>
+</ContentPage>

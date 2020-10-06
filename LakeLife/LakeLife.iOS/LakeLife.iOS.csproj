@@ -220,4 +220,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\tarpnclean.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\CartIcon.png" />
+  </ItemGroup>
 </Project>

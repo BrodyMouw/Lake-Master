@@ -12,12 +12,19 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
+        <StackLayout Orientation="Horizontal"  Grid.Row="0">
+            <Label Text="text" HorizontalOptions="StartAndExpand"/>
+            <ImageButton BackgroundColor="Transparent" Aspect="AspectFill" Source="CartIcon.png"
+                     Clicked="OpenCart" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
+        </StackLayout>
+
         <!--Search Bar-->
         
-        <Frame HasShadow="True" Margin="0,20" Padding="0" HeightRequest="40" HorizontalOptions="FillAndExpand">
+        <Frame HasShadow="True" Margin="0,20" Padding="0" HeightRequest="40" HorizontalOptions="FillAndExpand" Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -31,7 +38,7 @@
         </Frame>
         
         <!--Label and filters-->
-        <Label Grid.Row="1" Text="Our Services" FontSize="20" TextColor="#323234" FontFamily="ThemeFontRegular" HorizontalOptions="Start"/>
+        <Label Grid.Row="2" Text="Our Services" FontSize="20" TextColor="#323234" FontFamily="ThemeFontRegular" HorizontalOptions="Start"/>
 
         <!--<StackLayout Grid.Row="1">
             <Label Text="Property Type" TextColor="#515151" FontSize="15" FontFamily="ThemeFontBold"/>
@@ -75,7 +82,7 @@
         </StackLayout>-->
 
         <!--Items lists (properties)-->
-        <ScrollView Grid.Row="2" Margin="0,10" VerticalScrollBarVisibility="Never">
+        <ScrollView Grid.Row="3" Margin="0,10" VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="Transparent" BindableLayout.ItemsSource="{Binding GigList}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>

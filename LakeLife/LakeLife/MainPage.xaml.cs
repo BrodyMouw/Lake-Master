@@ -49,6 +49,11 @@ namespace LakeLife
             await this.Navigation.PushAsync(new DetailsPage(property));
         }
 
+        private async void OpenCart(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new CartPage());
+        }
+
         private void SelectType(object sender, EventArgs e)
         {
             var view = sender as View;
