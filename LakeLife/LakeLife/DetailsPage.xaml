@@ -93,6 +93,9 @@
                     <pv:GradientStop Color="AliceBlue" Offset="1" />
                 </pv:GradientStopCollection>
             </pv:PancakeView.BackgroundGradientStops>
+            <pv:PancakeView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AddToCart"/>
+            </pv:PancakeView.GestureRecognizers>
             <Label Text="Book Now" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
         </pv:PancakeView>
     </Grid>

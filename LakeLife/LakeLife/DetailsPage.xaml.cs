@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using LakeLife.Models;
 
 namespace LakeLife
 {
@@ -20,6 +21,12 @@ namespace LakeLife
         }
 
         public Gig Gig { get; set; }
+        private bool added = false;
+
+        public void AddToCart(object sender, EventArgs e)
+        {
+            
+        }
 
         private void GoBack(object sender, EventArgs e)
         {

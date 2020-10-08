@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using LakeLife.Models;
+using System.Runtime.CompilerServices;
+using LakeLife.Data;
 
 namespace LakeLife
 {
@@ -18,8 +21,20 @@ namespace LakeLife
             this.BindingContext = this;
         }
 
+        protected  MainPage(Gig newItem)
+        {
+            this.CartItems.Add(newItem);
+        }
+
         public List<GigType> GigTypeList => GetGigTypes();
         public List<Gig> GigList => GetGigs();
+
+        public List<Gig> CartItems;
+
+        public void addToCartItems(Gig newItem)
+        {
+           
+        }
 
         private List<GigType> GetGigTypes()
         {
@@ -37,7 +52,7 @@ namespace LakeLife
         {
             return new List<Gig>
             {
-                new Gig { Image = "boatFeet.jpg", GigName = "Tarp and Clean Package", Price = "$60",  Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
+                new Gig { Image = "boatFeet.jpg", GigName = "Tarp and Clean Package", Price = "$60",  Description = GigDescriptions.tarpNClean },
                 new Gig { Image = "halfDetail.jpg", GigName = "Half Detail Package", Price = "$300",  Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
                 new Gig { Image = "fullDetail.jpg", GigName = "Full Detail Package", Price = "$900", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
             };
@@ -51,7 +66,7 @@ namespace LakeLife
 
         private async void OpenCart(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new CartPage());
+            await this.Navigation.PushAsync(new CartPage(CartItems));
         }
 
         private void SelectType(object sender, EventArgs e)
@@ -81,14 +96,5 @@ namespace LakeLife
     public class GigType
     {
         public string TypeName { get; set; }
-    }
-
-    public class Gig
-    {
-        public string Id => Guid.NewGuid().ToString("N");
-        public string GigName { get; set; }
-        public string Image { get; set; }
-        public string Price { get; set; }
-        public string Description { get; set; }
     }
 }

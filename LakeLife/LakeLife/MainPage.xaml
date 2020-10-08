@@ -8,7 +8,7 @@
              st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
 
-    <Grid BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
+    <Grid BackgroundColor="#2980b9" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
 
         <StackLayout Orientation="Horizontal"  Grid.Row="0">
-            <Label Text="text" HorizontalOptions="StartAndExpand"/>
+            <Label Text="Lake Life" HorizontalOptions="StartAndExpand" FontSize="35" TextColor="white" FontFamily="FancyFont"/>
             <ImageButton BackgroundColor="Transparent" Aspect="AspectFill" Source="CartIcon.png"
                      Clicked="OpenCart" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
         </StackLayout>
@@ -38,7 +38,7 @@
         </Frame>
         
         <!--Label and filters-->
-        <Label Grid.Row="2" Text="Our Services" FontSize="20" TextColor="#323234" FontFamily="ThemeFontRegular" HorizontalOptions="Start"/>
+        <Label Grid.Row="2" Text="Our Services" FontSize="20" TextColor="white" FontFamily="Fjalla" HorizontalOptions="Start" TextDecorations="Underline"/>
 
         <!--<StackLayout Grid.Row="1">
             <Label Text="Property Type" TextColor="#515151" FontSize="15" FontFamily="ThemeFontBold"/>

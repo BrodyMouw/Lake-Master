@@ -20,6 +20,8 @@
     <EmbeddedResource Include="Fonts\NunitoSans-Bold.ttf" />
     <EmbeddedResource Include="Fonts\NunitoSans-Regular.ttf" />
     <EmbeddedResource Include="Fonts\NunitoSans-SemiBold.ttf" />
+    <EmbeddedResource Include="Fonts\Balqis.ttf" />
+    <EmbeddedResource Include="Fonts\FjallaOne-Regular.ttf" />
   </ItemGroup>
 
   <ItemGroup>

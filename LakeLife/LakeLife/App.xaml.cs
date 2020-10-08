@@ -6,6 +6,8 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("NunitoSans-Regular.ttf", Alias = "ThemeFontRegular")]
 [assembly: ExportFont("NunitoSans-SemiBold.ttf", Alias = "ThemeFontSemiBold")]
 [assembly: ExportFont("NunitoSans-Bold.ttf", Alias = "ThemeFontBold")]
+[assembly: ExportFont("Balqis.ttf", Alias = "FancyFont")]
+[assembly: ExportFont("FjallaOne-Regular.ttf", Alias = "Fjalla")]
 
 namespace LakeLife
 {
