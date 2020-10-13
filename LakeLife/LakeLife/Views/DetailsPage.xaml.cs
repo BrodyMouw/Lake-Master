@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using LakeLife.Models;
+using LakeLife.Helpers;
 
 namespace LakeLife
 {
@@ -21,11 +22,34 @@ namespace LakeLife
         }
 
         public Gig Gig { get; set; }
-        private bool added = false;
 
-        public void AddToCart(object sender, EventArgs e)
+        private void AddToCart(object sender, EventArgs e)
         {
-            
+            if (IsBusy)
+                return;
+
+            try
+            {
+                IsBusy = true;
+
+                var selectedItem = this.Gig;
+
+                var index = selectedItem.Index;
+                if (index == 1)
+                    Settings.ItemStatus1 = true;
+                if (index == 2)
+                    Settings.ItemStatus2 = true;
+                if (index == 3)
+                    Settings.ItemStatus3 = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception is " + ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         private void GoBack(object sender, EventArgs e)
