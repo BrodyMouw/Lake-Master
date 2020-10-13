@@ -1,4 +1,5 @@
-﻿using Plugin.SharedTransitions;
+﻿using LakeLife.Helpers;
+using Plugin.SharedTransitions;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,11 +22,11 @@ namespace LakeLife
                 BarTextColor = Color.White,
                 BarBackgroundColor = Color.FromHex("#2B84D3")
             };
-            //MainPage = new SharedTransitionNavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
+            Settings.Reset();
         }
 
         protected override void OnSleep()
