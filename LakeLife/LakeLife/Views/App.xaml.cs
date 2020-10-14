@@ -20,7 +20,7 @@ namespace LakeLife
             MainPage = new SharedTransitionNavigationPage(new SplashPage())
             {
                 BarTextColor = Color.White,
-                BarBackgroundColor = Color.FromHex("#2B84D3")
+                BarBackgroundColor = Color.FromHex("#5dade2"),
             };
         }
 

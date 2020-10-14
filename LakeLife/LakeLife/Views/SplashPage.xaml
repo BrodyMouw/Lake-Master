@@ -7,7 +7,11 @@
              st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
              x:Class="LakeLife.SplashPage"
              Title="{Binding Title}"
-	         IsBusy="{Binding IsBusy}">
+	         IsBusy="{Binding IsBusy}"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="#5dade2">
+    
     <ContentPage.Content Padding="0">
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
@@ -30,7 +34,7 @@
 				Clicked="GetStarted"
 				Grid.Row="1"
                 Grid.ColumnSpan="2"
-				BackgroundColor="#3498DB"
+				BackgroundColor="#5dade2"
 				BorderRadius="0"
 				TextColor="White" 
 				Text="Get Started"/>
