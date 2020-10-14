@@ -6,7 +6,10 @@
              xmlns:st="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              st:SharedTransitionNavigationPage.TransitionSelectedGroup="products"
-             mc:Ignorable="d" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False">
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="#f7de78">
     
     
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#f7de78">

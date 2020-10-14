@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using LakeLife.Models;
 using LakeLife.ViewModels;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace LakeLife
 {
@@ -36,7 +37,6 @@ namespace LakeLife
             {
                 _ViewModel.GetData.Execute(null);
             });
-
         }
     }
 }
