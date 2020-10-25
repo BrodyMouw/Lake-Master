@@ -10,7 +10,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true"
              BackgroundColor="#2980b9">
-    
+
     <Grid BackgroundColor="#2980b9" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -20,28 +20,19 @@
             </Grid.RowDefinitions>
 
             <StackLayout Orientation="Horizontal"  Grid.Row="0">
-                <Label Text="Lake Life" HorizontalOptions="StartAndExpand" FontSize="35" TextColor="#fef9e7" FontFamily="FancyFont"/>
+            <Label Text="Lake Life" HorizontalOptions="StartAndExpand" FontSize="35" TextColor="#f5d451" FontFamily="FancyFont"/>
                 <ImageButton BackgroundColor="Transparent" Aspect="AspectFill" Source="CartIcon.png"
                              Clicked="OpenCart" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="30" WidthRequest="30"/>
-            </StackLayout>
+            <Label Text="{Binding CartCount}" HorizontalOptions="End" FontSize="15" TextColor="#f5d451" FontFamily="Fjalla"/>
+        </StackLayout>
 
             <!--Search Bar-->
 
-            <Frame HasShadow="True" Margin="0,20" Padding="0" HeightRequest="40" HorizontalOptions="FillAndExpand" Grid.Row="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Image HeightRequest="20" WidthRequest="20" Margin="20,0" Source="search.png"/>
-                    <Entry Grid.Column="1" Placeholder="Search" TextColor="Black" FontSize="15" FontFamily="ThemeFontRegular" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
-                    <Image Grid.Column="2" HeightRequest="20" WidthRequest="20" Margin="20,0" Source="filter.png"/>
-                </Grid>
-            </Frame>
+        <Frame HasShadow="True" Margin="0,5" Padding="0" HeightRequest="5" HorizontalOptions="FillAndExpand" Grid.Row="1" BackgroundColor="#f5d451">
+        </Frame>
 
             <!--Label and filters-->
-            <Label Grid.Row="2" Text="Our Services" FontSize="20" TextColor="#fef9e7" FontFamily="Fjalla" HorizontalOptions="Start" TextDecorations="Underline"/>
+        <Label Grid.Row="2" Text="Our Services" FontSize="20" TextColor="White" FontFamily="Fjalla" HorizontalOptions="Start" TextDecorations="Underline"/>
 
             <!--<StackLayout Grid.Row="1">
                     <Label Text="Property Type" TextColor="#515151" FontSize="15" FontFamily="ThemeFontBold"/>

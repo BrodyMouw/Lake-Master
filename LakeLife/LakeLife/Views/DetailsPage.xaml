@@ -17,6 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1.2*"/>
             <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <!--first row (image)-->
@@ -38,7 +39,11 @@
                 </StackLayout>
             </ScrollView>
         </pv:PancakeView>
-        <pv:PancakeView Grid.Row="2" HeightRequest="50" BackgroundGradientAngle="270">
+        <pv:PancakeView x:Name="AddedPopUp" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="0" BackgroundColor="#f7de78" 
+                        CornerRadius="30,30,30,30">
+            <Label Text="Added To Cart" FontSize="18" TextColor="#323234" FontFamily="ThemeFontBold" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </pv:PancakeView>
+        <pv:PancakeView Grid.Row="3" HeightRequest="50" BackgroundGradientAngle="270">
             <pv:PancakeView.BackgroundGradientStops>
                 <pv:GradientStopCollection>
                     <pv:GradientStop Color="#3498DB" Offset="0" />
