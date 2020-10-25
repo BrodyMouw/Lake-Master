@@ -19,6 +19,14 @@ namespace LakeLife.ViewModels
 
         public List<Gig> GigList => GetGigs();
 
+        public string totalPrice;
+
+        public string TotalPrice
+        {
+            get { return totalPrice; }
+            set { SetProperty(ref totalPrice, value); }
+        }
+
         public CartPageViewModel()
         {
             CartList = new ObservableRangeCollection<Gig>();
@@ -37,6 +45,9 @@ namespace LakeLife.ViewModels
             {
                 IsBusy = true;
                 List<Gig> Gigs = await _Service.GetGigs();
+
+                TotalPrice = CalculateTotal.calculateTotal().ToString("C0");
+                //TotalPrice = String.Format("{0:N2}", temp);
             }
             catch (Exception e)
             {

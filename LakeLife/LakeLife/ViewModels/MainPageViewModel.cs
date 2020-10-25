@@ -1,4 +1,5 @@
-﻿using LakeLife.Models;
+﻿using LakeLife.Helpers;
+using LakeLife.Models;
 using LakeLife.Services.ServiceInterface;
 using MvvmHelpers;
 using System;
@@ -15,6 +16,14 @@ namespace LakeLife.ViewModels
         public List<Gig> CartItems;
         public readonly IGigService _Service;
         public Command GetData { get; set; }
+
+        public string cartCount;
+
+        public string CartCount
+        {
+            get { return cartCount; }
+            set { SetProperty(ref cartCount, value); }
+        }
 
         public MainPageViewModel()
         {
@@ -46,6 +55,8 @@ namespace LakeLife.ViewModels
             {
                 IsBusy = true;
                 List<Gig> Gigs = await _Service.GetGigs();
+
+                CartCount = CartCounter.CartCount().ToString();
             }
             catch (Exception e)
             {

@@ -25,6 +25,7 @@ namespace LakeLife
 
         private void AddToCart(object sender, EventArgs e)
         {
+            AddedPopUp.HeightRequest = 40;
             if (IsBusy)
                 return;
 
@@ -60,8 +61,10 @@ namespace LakeLife
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            AddedPopUp.HeightRequest = 0;
             DetailsView.TranslationY = 600;
             DetailsView.TranslateTo(0, 0, 500, Easing.SinInOut);
+            AddedPopUp.HeightRequest = 0;
         }
     }
 }
